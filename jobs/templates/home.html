@@ -82,12 +82,12 @@
       <div class="container">
 
     <div class="row">
-      {% for job in jobs.all %}
+      {% for Job in jobs.all %}
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{ job.image.url }}" width=300 height=300/>
+              <img class="card-img-top" src="{{ Job.image.url }}" width=300 height=300/>
             <div class="card-body">
-            <p class="card-text">{{ job.summary }}</p>
+            <p class="card-text">{{ Job.summary }}</p>
             </div>
             </div>
           </div>
