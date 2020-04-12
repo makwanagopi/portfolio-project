@@ -1,16 +1,19 @@
 <!doctype html>
+
   <html lang="en">
+  {% load staticfiles %}
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
-      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-      <meta name="generator" content="Jekyll v3.8.6">
-      <title>Album example · Bootstrap</title>
+      <meta name="author" content="">
+      
+      <title>GopiKumar Makwana</title>
 
       <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
       <!-- Bootstrap core CSS -->
+  }
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
@@ -44,18 +47,18 @@
       <!-- Custom styles for this template -->
       <link href="album.css" rel="stylesheet">
     </head>
-    <body>
+    <body >
       <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"style="position: fixed; width:100%">
-    <a class="navbar-brand" href="#">GopiKumar Makwana</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"style="position: fixed; width:100%;z-index: 1;">
+    <a class="navbar-brand" href="{% url 'home' %}">GopiKumar Makwana</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="#">Twitter</a>
-        <a class="nav-item nav-link" href="#">Resume</a>
-        <a class="nav-item nav-link" href="#">Blog</a>
+        <a class="nav-item nav-link" href="https://www.facebook.com">Facebook</a>
+        <a class="nav-item nav-link" href="{% static 'Resume_Gopi.pdf' %}">Resume</a>
+        <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
       </div>
     </div>
   </nav>
@@ -66,11 +69,12 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1>Hi,this is gopi</h1>
-        <p class="lead text-muted">Just Fuck off You bustard</p>
+        <p class="lead text-muted">Hey,this is Gopikumar makwana ,i love coding and i code without using <strong>semicolons</strong></p>
         <p>
-          <a href="mailto:makgopi007@gmail.com" class="btn btn-primary my-2">Email Me</a>
+          <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="btn btn-primary my-2">Email Me</a>
 
         </p>
+        <img src="{% static 'Gopi.jpg'%}" height=200 width=200 />
       </div>
     </section>
 
@@ -81,7 +85,7 @@
       {% for job in jobs.all %}
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{ job.image.url }}"/>
+              <img class="card-img-top" src="{{ job.image.url }}" width=300 height=300/>
             <div class="card-body">
             <p class="card-text">{{ job.summary }}</p>
             </div>
