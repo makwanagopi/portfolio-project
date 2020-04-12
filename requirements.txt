@@ -3,7 +3,7 @@ chardet==3.0.4
 colorama==0.4.3
 crypto==1.4.1
 des==1.0.5
-Django==2.0.2
+Django==2.2.10
 django-fontawesome==1.0
 django-leaflet==0.26.0
 django-otp==0.8.1
