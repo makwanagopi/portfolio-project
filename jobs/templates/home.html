@@ -29,6 +29,10 @@
 
 
       <style>
+        .f{ /* IE 9 */
+          transform: rotate(-15deg);
+
+        }
         .bd-placeholder-img {
           font-size: 1.125rem;
           text-anchor: middle;
@@ -74,7 +78,7 @@
           <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="btn btn-primary my-2">Email Me</a>
 
         </p>
-        <img src="{% static 'Gopi.jpg'%}" height=200 width=200 />
+        <img class="rounded-circle f"src="{% static 'Gopi.jpg'%}" height=200 width=200 />
       </div>
     </section>
 
